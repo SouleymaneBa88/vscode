@@ -183,7 +183,7 @@ label #cancel {
 #check:checked ~ .menu {
     left: 0;
 }
-@media screen and (max-width: 768px) {
+@media  (max-width: 768px) {
     body {
         height: auto;
     }
@@ -230,7 +230,7 @@ label #cancel {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .menu {
         width: 20vh;
     }
@@ -251,7 +251,8 @@ label #cancel {
 
     section {
         height: auto;
-        min-width: 100%;
+        width: 85%;
+        border:1px solid;
     }
 
     table {
