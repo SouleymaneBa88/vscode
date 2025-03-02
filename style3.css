@@ -1,5 +1,5 @@
 body {
-    display: block;
+    background-color: #03A688;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -292,5 +292,8 @@ label #cancel {
     }
     .contenu {
         margin-top: 2vh;
+    }
+    form{
+        padding-bottom: 52vh;
     }
 }

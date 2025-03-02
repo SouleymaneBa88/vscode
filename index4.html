@@ -5,8 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style3.css">
 </head>
+<style>
+   .pd {
+    /* Centrer le formulaire verticalement et horizontalement */
+    height: 100vh; /* Utiliser 100% de la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vh;
+    max-width: 500px; /* Ajouter une largeur maximale pour ne pas rendre le formulaire trop large */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Ajout d'un peu de padding à l'intérieur du formulaire */
+}
+
+form label {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+</style>
 <body>
     <input type="checkbox" id="check">
     <label for="check">
@@ -19,46 +78,47 @@
                 <input type="search" value="search"><i class="fa fa-search" aria-hidden="true"></i>
                 <img src="img/R.png" alt="">
                 <div class="pr">
-                
                     <ul class="ch">
-                        <li><a href="#">></a>
-                        <li><a href="index3.html">Profile</a></li>
-                        <li><a href="index4.html">Paramétre</a></li>
-                        <li><a href="index.html">Déconnection</a></li>
-                    </li>
+                        <li><a href="#">></a></li>
+                        <li><a href="index3.html"><i class="fa fa-user" aria-hidden="true"></i>Profile</a></li>
+                        <li><a href="index4.html"><i class="fa fa-cog" aria-hidden="true"></i>Paramétre</a></li>
+                        <li><a href="index.html"><i class="fa fa-power-off" aria-hidden="true"></i>Déconnection</a></li>
                     </ul>
                 </div>
             </header>
             <ul>
                 <img src="img/R.png" alt=""><h4>Jules</h4>
-                <h2>Dashboard</h2>
-                <li><a href="#">Article ></a>
+                <h2><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</h2>
+                <li><a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>Article ></a>
                 <ul>
                     <li><a href="#">Tous les articles</a></li>
                     <li><a href="#">Ajouter un article</a></li>
                 </ul>
-                <li><a href="#">Catégories ></a>
+                <li><a href="#"><i class="fa fa-cubes" aria-hidden="true"></i>
+                    Catégories ></a>
                     <ul>
                     <li><a href="#">Toutes les catégories</a></li>
                     <li><a href="#">Ajouter une catégorie</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Auteurs ></a>
+                <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                    Auteurs ></a>
                     <ul>
                         <li><a href="#">Tous les auteurs</a></li>
                         <li><a href="#">Ajouter un auteur</a></li>
                       </ul>
                 </li>
-                <li><a href="#">Commentaires</a></li>
-                <li><a href="#">Médias Sociaux ></a>
+                <li><a href="#"><i class="fa fa-comments" aria-hidden="true"></i>Commentaires</a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i>
+                    Médias Sociaux ></a>
                     <ul>
                         <li><a href="#">Tous les médias</a></li>
                         <li><a href="#">Ajouter un média</a></li>
                       </ul>
                 </li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="#">Paramètres</a></li>
-                <li><a href="#">Pages ></a>
+                <li><a href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Contacts</a></li>
+                <li><a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>Paramètres</a></li>
+                <li><a href="#"><i class="fa fa-file" aria-hidden="true"></i>Pages ></a>
                     <ul>
                         <li><a href="#">Toutes les pages</a></li>
                         <li><a href="#">Ajouter une page</a></li>
@@ -66,40 +126,23 @@
                 </li>
             </ul>
         </nav>
-        <div class="pb">
-            <form>
-                <div class="form-group">
-                    <label for="site-name">Nom du site <span>*</span></label>
-                    <input type="text" id="site-name" name="site-name">
-                </div>
-    
-                <div class="form-group">
-                    <label for="phone">Numéro de téléphone</label>
-                    <input type="text" id="phone" name="phone">
-                </div>
-    
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-    
-                <div class="form-group">
-                    <label for="image">Add une image</label>
-                    <input type="file" id="image" name="image">
-                </div>
-    
-                <div class="form-group">
-                    <label for="address">Adresse</label>
-                    <input type="text" id="address" name="address">
-                </div>
-    
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description"></textarea>
-                </div>
-    
-                <button type="submit" class="btn-save">Save</button>
-            </div>
+        <div class="pd">
+      <form>
+        <label for="Prenom">Prenom
+            <input type="text" id="Prenom" name="Prenom" required>
+        </label>
+        <label for="nom">Nom
+            <input type="text" id="nom" name="nom" required>
+        </label>
+        <label for="Address">Address
+            <input type="text" id="Address" name="Address" required>
+        </label>
+        <label for="description">Description
+            <input type="text" id="description" name="description" required>
+        </label>
+        <button type="submit">Soumettre</button>
+      </form>
+    </div>
     </div>   
 </body> 
-</html>          
+</html>
