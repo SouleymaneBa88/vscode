@@ -87,7 +87,7 @@ section {
 }
 table {
     border-collapse: collapse;
-    min-width: 130vh;
+    width: 100vh;
     margin: 15px;
 }
 thead, tbody {
@@ -132,7 +132,7 @@ img {
     width: 85%;
 }
 .table {
-    width: 92%;
+    width: 100%;
     background-color: white;
 }
 .sb {
