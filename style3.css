@@ -1,0 +1,296 @@
+body {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container and Main Layout */
+.container {
+    display: flex;
+    margin: 10px;
+}
+.menu {
+    height: 100vh;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    width: 40vh;
+}
+
+/* Submenu */
+.menu ul li ul { 
+    display: none; 
+    position: absolute; 
+    left: 250px;
+    top: 0; 
+    background-color: #03A688;
+    color: #FFFFFF;
+}
+nav ul li:hover ul { 
+    display: block; 
+}
+nav ul li ul li { 
+    width: 200px; 
+}
+nav ul li a {
+    display: block; 
+    padding: 10px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #03A688;
+}
+nav ul li { 
+    position: relative; 
+}
+nav ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main Content Styling */
+.contenu {
+    justify-content: flex-end;
+    margin-top: 11vh;
+    background-color: #F2F5FA;
+}
+header {
+    width: 90vw;
+    padding: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 40px;
+    box-shadow: 6px 5px 10px;
+}
+.input {
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: #03A688;
+    padding: 10px;
+}
+.dv {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+section {
+    border: 1px solid rgb(226, 223, 223);
+    margin: 10px;
+    min-width: 23%;
+    height: 15vh;
+    box-shadow: 6px 0px 10px;
+    background-color: #FFFFFF;
+    color: #03A688;
+}
+table {
+    border-collapse: collapse;
+    min-width: 130vh;
+    margin: 15px;
+}
+thead, tbody {
+    background-color: #FFFFFF;
+    border: 1px solid white; 
+    border-bottom: 2px solid white;
+    height: 35px;
+    padding: 15px;
+}
+.jg {
+    margin: 10px;
+}
+h2 {
+    background-color: #03A688;
+    color: #EBEEF2;
+}
+ 
+.td {
+    background-color: #EBEEF2;
+}
+img {
+    width: 55px;
+    border-radius: 50%;
+}
+.conten {
+    background-color: #F2F5FA;
+    margin-top: 13vh;
+    width: 80%;
+    padding: 10px;
+}
+.Profile {
+    border: 1px solid white;
+    width: 83%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+.ip {
+    background-color: white;
+    border: 1px solid white;
+    margin: 10px;
+    width: 85%;
+}
+.table {
+    width: 92%;
+    background-color: white;
+}
+.sb {
+    display: flex;
+    padding: 10px;
+    gap: 83vh;
+}
+
+/* Modal Styling */
+.modal-checkbox {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #1213130e;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-checkbox:checked + .modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.close {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#prenom, #nom, #email {
+    width: 35vh;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.ch:checked {
+    visibility: visible;
+    opacity: 2;
+}
+#check {
+    display: none;
+}
+
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: black;
+    padding: 6px 12px;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: 195px;
+    top: 17px;
+    font-size: 30px;
+    color: black;
+    padding: 4px 9px;
+}
+
+#check:checked ~ .menu {
+    left: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+    .menu {
+        width: 25vh;
+    }
+    header {
+        width: 100vw;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        width: 50%;
+        height: auto;
+    }
+    .contenu {
+        margin-top: 2vh;
+    }
+    .container {
+        flex-direction: column;
+        margin: 5px;
+    }
+    nav ul li a {
+        padding: 10px;
+    }
+    section {
+        margin: 5px;
+        min-width: 6%;
+    }
+    table {
+        width: 100%;
+        overflow-x: scroll;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        width: 20vh;
+    }
+    nav ul li a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    input {
+        width: 80%;
+        height: auto;
+    }
+    header {
+        padding: 5px;
+    }
+    section {
+        height: auto;
+        min-width: 100%;
+    }
+    table {
+        min-width: 100%;
+    }
+    .contenu {
+        margin-top: 2vh;
+    }
+}

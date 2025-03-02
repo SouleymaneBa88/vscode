@@ -1,0 +1,336 @@
+body {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 85%;
+}
+.container {
+    display: flex;
+    margin: 10px;
+}
+.menu {
+    height: 100vh;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    width: 35vh;
+    
+}
+.menu ul li ul { 
+    display: none; 
+    position: absolute; 
+    left: 200px; /* Ajustez cette valeur pour aligner le sous-menu */ 
+    top: 0; 
+    background-color: #03A688;
+    color: #FFFFFF;
+    
+}
+nav ul li:hover ul { 
+    display: block; 
+}
+nav ul li ul li { 
+    width: 200px; 
+}
+nav ul li a {
+    display: block; 
+    padding: 14px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #03A688;
+}
+nav ul li { 
+    position: relative; 
+    
+}
+nav ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.contenu {
+    justify-content: flex-end;
+    margin-top: 11vh;
+    background-color: #F2F5FA;
+}
+header {
+    width: 90vw;
+    padding: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    flex-direction:row;
+    height: 40px;
+    box-shadow: 10px 10px 20px;
+
+}
+input {
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: #03A688;
+    padding: 10px;
+}
+
+.dv {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+section {
+    border: 1px solid rgb(226, 223, 223);
+    margin: 10px;
+    min-width: 23%;
+    height: 15vh;
+    box-shadow: 6px 0px 10px;
+    background-color: #FFFFFF;
+    color: #03A688;
+}
+table {
+    border-collapse: collapse;
+    min-width: 130vh;
+    margin: 15px;
+}
+thead, tbody {
+    background-color: #FFFFFF;
+    border: 1px solid white; 
+    border-bottom: 2px solid white;
+    height: 35px;
+    padding: 15px;
+}
+.jg {
+    margin: 10px;
+}
+h2 {
+    background-color: #03A688;
+    color: #EBEEF2;
+}
+i {
+    display: flex;
+    float: right;
+    color: #03A688;
+}
+.td {
+    background-color: #EBEEF2;
+}
+img {
+    width: 55px;
+    border-radius: 50%;
+}
+/*  */
+
+.pr{
+position: relative;
+display: flex;
+flex-direction: column;
+
+}
+.sous{
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+justify-content: center;
+background-color: #03A688;
+border: 1px solid #ddd;
+box-shadow: 0px 4px 6px rgb( 0, 0, 0, 0.1);
+z-index: 1000;
+width: 200px;
+cursor: pointer ;
+
+}
+.pr:hover , .sous{
+display: block;
+
+}
+.ch,a:hover{
+    background-color: aqua;
+    border-radius: 35%;
+}
+.close {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+}
+#check {
+    display: none;
+}
+
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: black;
+    padding: 6px 12px;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: 195px;
+    top: 17px;
+    font-size: 30px;
+    color: black;
+    padding: 4px 9px;
+}
+
+/* Lorsque le checkbox est coché, le menu s'affiche */
+#check:checked ~ .menu {
+    left: 0;
+}
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    .menu {
+        width: 25vh;
+    }
+
+    header {
+        width: 100vw;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 50%;
+        height: auto;
+    }
+
+    .contenu {
+        margin-top: 2vh;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    section {
+        margin: 5px;
+        min-width: 6%;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: scroll;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        width: 20vh;
+    }
+
+    nav ul li a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    input {
+        width: 80%;
+        height: auto;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    section {
+        height: auto;
+        min-width: 100%;
+    }
+
+    table {
+        min-width: 100%;
+    }
+
+    .contenu {
+        margin-top: 2vh;
+    }
+
+    .dv {/* Styles pour le menu sidebar */
+.sidebar {
+    height: 100%;
+    width: 0; /* Initialement caché */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Contenu principal */
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* Bouton pour ouvrir le menu */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #03A688;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Responsive Sidebar */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Pleine largeur sur mobile */
+        height: 100%; /* Prend toute la hauteur */
+    }
+    .openbtn {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+        padding: 5px;
+        margin: 5px;
+    }
+}

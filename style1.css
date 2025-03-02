@@ -1,0 +1,182 @@
+/* Styles généraux */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #F8F9FB;
+    box-shadow: 10px 10px 20px green;
+}
+
+.containe {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: center; /* Centre horizontalement les éléments */
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Ombre blanche avec opacité réduite */
+}
+
+.tleft {
+    border: 1px solid white;
+    background-color: #038C73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vh;
+    height: 55vh;
+}
+
+.tright {
+    border: 1px solid white;
+    width: 40vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Pour aligner les inputs verticalement */
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+}
+
+img {
+    width: 30vh;
+    border-radius: 50%;
+    background-color: #3F93A6;
+}
+
+input {
+    margin: 5px 0; /* Ajoute un peu d'espace entre les inputs */
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 35vh;
+}
+
+.button {
+    background-color: #038C73;
+    color: white;
+}
+
+/* Styles pour les boutons */
+button {
+    background-color: green;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0; /* Initialement caché */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Contenu principal */
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+/* Bouton pour ouvrir le menu */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #03A688;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    .containe {
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    input {
+        width: 50%;
+        height: auto;
+    }
+
+    .tleft, .tright {
+        width: 90%;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: scroll;
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%; /* Pleine largeur sur mobile */
+        height: 100%; /* Prend toute la hauteur */
+    }
+
+    .openbtn {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tleft, .tright {
+        width: 100%;
+        height: auto;
+    }
+
+    input {
+        width: 80%;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .dv {
+        padding: 5px;
+        margin: 5px;
+    }
+}
