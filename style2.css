@@ -2,10 +2,13 @@ body {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     height: 85%;
+    width: 100%;
+    background-color: #03A688;
 }
 .container {
     display: flex;
     margin: 10px;
+    padding: 10px;
 }
 .menu {
     height: 100vh;
@@ -49,7 +52,8 @@ nav ul {
 .contenu {
     justify-content: flex-end;
     margin-top: 11vh;
-    background-color: #F2F5FA;
+    background-color: #03A688;
+    padding: 15px;
 }
 header {
     width: 90vw;
@@ -178,7 +182,9 @@ label #cancel {
     color: black;
     padding: 4px 9px;
 }
-
+#gt{
+    color: white;
+}
 /* Lorsque le checkbox est coché, le menu s'affiche */
 #check:checked ~ .menu {
     left: 0;
@@ -186,6 +192,7 @@ label #cancel {
 @media  (max-width: 768px) {
     body {
         height: auto;
+        width: 100%;
     }
 
     .menu {
@@ -230,7 +237,7 @@ label #cancel {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .menu {
         width: 20vh;
     }
@@ -320,7 +327,7 @@ label #cancel {
 }
 
 /* Responsive Sidebar */
-@media screen and (max-width: 768px) {
+@media  (max-width: 420px) {
     .sidebar {
         width: 100%; /* Pleine largeur sur mobile */
         height: 100%; /* Prend toute la hauteur */
